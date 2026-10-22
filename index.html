@@ -452,7 +452,14 @@ function openProject(kind, slug){
   const actions=document.getElementById('dialog-actions'); actions.innerHTML='';
   const meta=document.getElementById('dialog-meta');
   if(kind==='portfolio'){
-    actions.appendChild(actionButton(item.pdf,'PDF 다운로드 ↓',true,false,false,true));
+    const downloadNames = {
+      dungeon: '던전 시스템.pdf',
+      soulworker: '소울워커 보스 몬스터 컨셉 기획.pdf',
+      monster: 'MMORPG 일반 몬스터 AI.pdf'
+    };
+    const pdfDownloadButton = actionButton(item.pdf,'PDF 다운로드 ↓',true,false,false,true);
+    pdfDownloadButton.setAttribute('download', downloadNames[item.slug] || '기획서.pdf');
+    actions.appendChild(pdfDownloadButton);
     actions.appendChild(actionButton(item.pdf,'PDF 열람 ↗',false,true));
     meta.textContent='원본 문서 · '+item.pages;
   } else {
