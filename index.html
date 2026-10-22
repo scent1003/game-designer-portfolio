@@ -88,6 +88,11 @@ footer{border-top:1px solid #24302c;padding:24px 0;color:#7c8884;font-size:12px}
 @media(max-width:430px){.game-catalog{grid-template-columns:1fr}.game-group,.game-group:nth-child(n+4){grid-column:span 1}}
 .team-work-image{margin:24px 0;background:#0d0d0d;border:1px solid #31433e}
 .team-work-image a{display:block;cursor:zoom-in}
+.team-work-point p em{font-style:normal;color:var(--mint)}
+.team-level-description{padding:20px 18px 4px}
+.team-level-description .team-work-point{border-left:0;padding-left:16px;position:relative}
+.team-level-description .team-work-point::before{content:'•';position:absolute;left:0;top:0;color:var(--mint)}
+.team-level-description .team-work-point p{color:#e0e6e3}
 .team-work-heading{margin:0;padding:16px 18px;color:var(--mint);font-size:20px;line-height:1.5;border-bottom:1px solid #31433e}
 .team-work-visual{position:relative;overflow:hidden;background:#0d0d0d}
 .team-work-image .team-work-visual img{position:absolute;max-width:none;height:auto}
@@ -107,6 +112,9 @@ footer{border-top:1px solid #24302c;padding:24px 0;color:#7c8884;font-size:12px}
 .ai-case-figure figcaption{padding:12px 16px;color:#aebdb7;font-size:12px;line-height:1.8}
 @media(max-width:900px){.ai-case-layout{grid-template-columns:1fr}.ai-case{padding:24px}.ai-case-title{margin-bottom:24px}}
 @media(max-width:680px){.ai-case{padding:20px 16px;margin-top:28px}.ai-case-layout{gap:22px}.ai-case-point h4{font-size:17px}}
+
+.engine-case-visual{position:relative;overflow:hidden;background:#0d0d0d}
+.engine-case-visual img{position:absolute;max-width:none;height:auto}
 </style>
 <style>
 /* Additional game art supplied by the portfolio owner. */
@@ -166,6 +174,7 @@ footer{border-top:1px solid #24302c;padding:24px 0;color:#7c8884;font-size:12px}
 <a href="#portfolio">PORTFOLIO</a>
 <a href="#team-projects">TEAM PROJECTS</a>
 <a href="#ai-workflow">AI USE</a>
+<a href="#game-engine-git">ENGINE &amp; GIT</a>
 <a class="link-accent" href="#contact">CONTACT ↗</a>
 </nav>
 <button aria-expanded="false" aria-label="메뉴 열기" id="menu">☰</button>
@@ -189,7 +198,7 @@ footer{border-top:1px solid #24302c;padding:24px 0;color:#7c8884;font-size:12px}
 <div class="art-foot">HA GWANGSEON — SELECTED WORKS</div>
 </div>
 </section>
-<div class="strip"><div class="shell strip-inner"><span><strong>01</strong> ABOUT ME</span><span><strong>02</strong> SELECTED WORKS</span><span><strong>03</strong> TEAM PROJECTS</span><span><strong>04</strong> AI WORKFLOW</span></div></div>
+<div class="strip"><div class="shell strip-inner"><span><strong>01</strong> ABOUT ME</span><span><strong>02</strong> SELECTED WORKS</span><span><strong>03</strong> TEAM PROJECTS</span><span><strong>04</strong> AI WORKFLOW</span><span><strong>05</strong> ENGINE &amp; GIT</span></div></div>
 <section class="shell about-shell" id="about">
 <div class="section-head">
 <div><div class="mini">01 / ABOUT ME</div><h2>자기소개</h2></div>
@@ -357,8 +366,14 @@ footer{border-top:1px solid #24302c;padding:24px 0;color:#7c8884;font-size:12px}
 </div>
 </article>
 </section>
+<section class="shell section" id="game-engine-git">
+<div class="section-head"><div><div class="mini">05 / GAME ENGINE &amp; GIT</div><h2>게임 엔진 &amp; 깃</h2></div><p>게임 엔진으로 기획을 구현하고, Git을 활용해 팀의 작업을 기록하고 공유했습니다.</p></div>
+<article class="ai-case engine-case"><h3 class="ai-case-title">Unity</h3><div class="ai-case-layout"><div class="ai-case-copy"><div class="ai-case-point"><h4>팀 프로젝트에 필요한 Unity 활용</h4><p>Dash Dash Dash에서는 <em>타일 팔레트를 활용한 2D 레벨 제작</em>을 담당했습니다. Project Jumper에서는 <em>애니메이션과 Animator의 상태 전환 구조</em>를 학습하고, 캐릭터 동작의 재생 조건과 전환 규칙을 문서로 정리했습니다.</p></div><div class="ai-case-point"><h4>3D 레벨 제작을 위한 모델링 활용</h4><p>Unity의 <em>ProBuilder를 활용해 3D 레벨의 지형과 구조</em>를 제작했습니다. 기본 도형을 조합하여 이동 경로와 공간 구조를 구성하며, <em>레벨 디자인을 실제 플레이 공간으로 구현하는 경험</em>을 쌓았습니다.</p></div></div><figure class="ai-case-figure"><a class="engine-case-visual" href="assets/engine-unity.png" target="_blank" rel="noopener noreferrer" aria-label="Unity 활용 사례 이미지 원본 보기 (새 탭)" style="aspect-ratio:948/625"><img src="assets/engine-unity.png" alt="Unity 타일 팔레트로 제작한 Dash Dash Dash 레벨, Project Jumper 애니메이션과 Animator, ProBuilder로 구성한 3D 레벨" loading="lazy" style="width:151.16033755274262%;left:-47.36286919831223%;top:-22.720000000000002%"></a><figcaption>Unity 활용 사례 · 이미지를 클릭하면 전체 원본을 볼 수 있습니다.</figcaption></figure></div></article>
+<article class="ai-case engine-case"><h3 class="ai-case-title">Unreal Engine</h3><div class="ai-case-layout"><div class="ai-case-copy"><div class="ai-case-point"><h4>애니메이션 편집</h4><p>월하일검의 애니메이션 작업을 담당하며 <em>애님 시퀀스와 몽타주의 역할과 편집 방법</em>을 익혔습니다. 게임에서 사용하는 대부분의 시퀀스와 몽타주를 직접 편집하며, <em>의도한 전투 분위기에 맞춰 캐릭터의 동작과 연출</em>을 조정했습니다.</p></div><div class="ai-case-point"><h4>이펙트 가공</h4><p><em>나이아가라 시스템과 트레일 이펙트의 구성 및 수정 방법</em>을 학습하고, 프로젝트에 사용할 이펙트 에셋을 가공했습니다. 기존 에셋을 그대로 적용하기보다 <em>게임의 분위기와 전투 연출에 어울리도록 수정</em>했습니다.</p></div><div class="ai-case-point"><h4>머티리얼 & 텍스처 수정</h4><p>외형 디자인에 필요한 <em>머티리얼·머티리얼 인스턴스·텍스처의 역할과 적용 관계</em>를 익혔습니다. 캐릭터와 이펙트에 적용된 설정 및 리소스를 편집하며, <em>프로젝트가 표현하려는 분위기에 맞춰 외형</em>을 조정했습니다.</p></div></div><figure class="ai-case-figure"><a class="engine-case-visual" href="assets/engine-unreal.png" target="_blank" rel="noopener noreferrer" aria-label="Unreal Engine 활용 사례 이미지 원본 보기 (새 탭)" style="aspect-ratio:947/619"><img src="assets/engine-unreal.png" alt="Unreal Engine 애니메이션 시퀀스·몽타주·시퀀서·블렌드 스페이스 편집, 나이아가라 이펙트와 텍스처·머티리얼 수정 사례" loading="lazy" style="width:150.68637803590286%;left:-47.20168954593453%;top:-23.263327948303715%"></a><figcaption>Unreal Engine 활용 사례 · 이미지를 클릭하면 전체 원본을 볼 수 있습니다.</figcaption></figure></div></article>
+<article class="ai-case engine-case"><h3 class="ai-case-title">Git</h3><div class="ai-case-layout"><div class="ai-case-copy"><div class="ai-case-point"><h4>작업 전 동기화와 편집 범위 분리</h4><p>GitHub와 GitLab을 사용하는 팀 프로젝트에서 <em>master·main의 최신 변경 사항을 개인 브랜치에 반영</em>한 뒤 작업을 시작했습니다. 개인 브랜치에서 담당 작업을 진행하고, 충돌로 인한 작업 지연을 방지하기 위해 <em>다른 브랜치에서 작업 중인 내용은 편집하지 않았습니다.</em> 부득이하게 편집이 필요할 때에는 <em>담당자와 미리 커뮤니케이션</em>했습니다.</p></div><div class="ai-case-point"><h4>작업 기록 후 공용 브랜치 반영</h4><p>작업을 마친 뒤 <em>변경 사항을 커밋하고 해당 작업 내용을 메모한 뒤 원격 저장소에 푸시</em>했습니다. 이후 개인 브랜치의 작업 내용을 공용 브랜치에 병합하며, <em>동기화부터 작업 기록·공유·병합까지</em> 프로젝트의 협업 과정을 수행했습니다.</p></div></div><figure class="ai-case-figure"><a class="engine-case-visual" href="assets/engine-git.png" target="_blank" rel="noopener noreferrer" aria-label="Git 활용 사례 이미지 원본 보기 (새 탭)" style="aspect-ratio:947/619"><img src="assets/engine-git.png" alt="Dash Dash Dash의 GitHub 푸시·커밋 기록과 월하일검의 GitLab 푸시·커밋·머지 기록" loading="lazy" style="width:151.63674762407604%;left:-47.72967265047519%;top:-22.617124394184167%"></a><figcaption>Git 활용 사례 · 이미지를 클릭하면 전체 원본을 볼 수 있습니다.</figcaption></figure></div></article>
+</section>
 <section class="shell contact" id="contact">
-<div class="mini">05 / CONTACT</div>
+<div class="mini">06 / CONTACT</div>
 <h2>LET'S <span>CONNECT.</span></h2>
 <p>연락처와 외부 이력서 / 배포 링크를 연결하는 영역입니다. 현재는 기본 이메일 버튼만 배치했습니다.</p>
 <a class="btn primary" href="mailto:hakangs730@naver.com">이메일 보내기 ↗</a>
@@ -388,11 +403,16 @@ const teamDetails={
   workImages:[{src:'assets/dash-level-design.png',crop:[1432,804,448,143,943,634],title:'난이도별 레벨 디자인 비교',alt:'Dash Dash Dash 레벨 디자인: 이지·노말·하드 모드의 장애물 배치 비교'}],
   overview:[['개발 기간','2024.08 ~ 2024.11'],['게임 개요','대시(Dash)를 이용해 장애물을 회피하는 사이드뷰 러닝 액션 게임'],['개인 담당','난이도별 레벨 디자인'],['성과','2024 G-STAR 출품']],
   work:[
-   ['대시 조작의 특성을 활용한 레벨 구성','좁은 장애물 사이를 통과하는 정밀한 대시 조작과 연속적인 빠른 입력을 요구하는 신속한 대시 조작으로 도전 요소를 구분했습니다. 각 조작 방식에 맞춰 장애물을 배치하여 서로 다른 조작 능력을 요구하는 레벨을 구성했습니다.'],
-   ['조작 숙련도에 따른 난이도 구분','이지·노말·하드의 3가지 난이도를 구성했습니다. 이지 모드는 5~7세 어린이도 플레이할 수 있는 난이도를 목표로 제작했으며, 노말·하드 모드는 더 높은 조작 숙련도를 요구하도록 장애물을 배치했습니다.']]
+   ['대시 조작의 특성을 활용한 레벨 구성','좁은 장애물 사이를 통과하는 <em>정밀한 대시 조작</em>과 연속적인 빠른 입력을 요구하는 <em>신속한 대시 조작</em>으로 도전 요소를 구분했습니다. 각 조작 방식에 맞춰 장애물을 배치하여 서로 다른 조작 능력을 요구하는 레벨을 구성했습니다.'],
+   ['조작 숙련도에 따른 난이도 구분','이지·노말·하드의 3가지 난이도를 구성했습니다. 이지 모드는 <em>5~7세 어린이도 플레이할 수 있는 난이도</em>를 목표로 제작했으며, 노말·하드 모드는 더 높은 조작 숙련도를 요구하도록 장애물을 배치했습니다.']]
  },
  jump:{
-  workImages:[{src:'assets/jumper-level-design.png',crop:[1432,798,450,141,942,630],title:'프로젝트 점퍼 · 레벨 디자인',alt:'프로젝트 점퍼 레벨 디자인: 목표 발견, 다음 목표와 경로 확인, 수집 경로 선택, 레버 작동으로 경로 개방'}],
+  levelDesign:[
+   ['목표는 보여주고 경로는 탐색','무엇을 수집할지 알면서도 직접 길을 찾도록 <em>첫 번째 별을 시야에 배치</em>했습니다.<br>도달 경로는 직접 안내하지 않고 주변 지형을 살펴보도록 구성했습니다.'],
+   ['다음 목표로 이어지는 시야 구성','탐색이 끊기지 않도록 첫 번째 별로 이동하는 중에 다음 별을 발견하게 했습니다.<br><em>연결된 발판과 이동 경로</em>를 보여주어 다음 행동을 판단하도록 했습니다.'],
+   ['수집 순서의 선택권 제공','정해진 순서를 따라가기보다 스스로 탐색하도록 <em>별을 향하는 경로에 갈림길</em>을 배치했습니다.<br>별의 위치와 이동 경로를 비교해 수집 순서를 선택하도록 설계했습니다.']
+  ],
+  workImages:[{src:'assets/jumper-level-design.png',crop:[1432,798,450,141,942,630],title:'Project Jumper : 레벨 디자인',alt:'프로젝트 점퍼 레벨 디자인: 목표 발견, 다음 목표와 경로 확인, 수집 경로 선택, 레버 작동으로 경로 개방'}],
   overview:[['개발 기간','2025.02 — 2025.10'],['게임 개요','지형을 탐색하고 별을 수집하며 진행하는 3D 플랫포머 게임'],['개인 담당','시스템 기획 · 플레이어 조작 방식 설계 · 프로젝트 팀장']],
   work:[
    ['플레이어 조작 방식 설계','플레이어의 이동과 점프 등 주요 조작 방식과 진행 규칙을 설계했습니다.'],
@@ -508,7 +528,14 @@ function openProject(kind, slug){
       heading.textContent=image.title;
       const caption=document.createElement('figcaption');
       caption.textContent=image.title+' · 이미지를 클릭하면 원본을 볼 수 있습니다.';
-      figure.append(heading,link,caption);
+      figure.appendChild(heading);
+      if(team.levelDesign){
+        const description=document.createElement('div');
+        description.className='team-level-description';
+        description.innerHTML=team.levelDesign.map(([title,body])=>`<div class="team-work-point"><h4>${title}</h4><p>${body}</p></div>`).join('');
+        figure.appendChild(description);
+      }
+      figure.append(link,caption);
       detail.appendChild(figure);
     }
   } else {
