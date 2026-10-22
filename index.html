@@ -122,6 +122,8 @@ footer{border-top:1px solid #24302c;padding:24px 0;color:#7c8884;font-size:12px}
 .ai-case-point h4{margin:0 0 12px;color:var(--mint);font-size:18px;line-height:1.5}
 .ai-case-point p{margin:0 0 12px;color:#c4cdca;font-size:15px;line-height:1.9;word-break:keep-all;overflow-wrap:anywhere}
 .ai-case-point em{font-style:normal;color:var(--mint)}
+.ai-project-gallery{display:grid;gap:22px;min-width:0}
+.ai-project-title{margin:0;padding:10px 12px;background:var(--mint);color:#04110e;text-align:center;font-size:14px;font-weight:800;line-height:1.5}
 .ai-case-figure{margin:0;min-width:0;border:1px solid #31433e;background:#0d0d0d}
 .ai-case-figure a{display:block;cursor:zoom-in}
 .ai-case-figure img{display:block;width:100%;height:auto}
@@ -376,7 +378,10 @@ footer{border-top:1px solid #24302c;padding:24px 0;color:#7c8884;font-size:12px}
 <div class="ai-case-point"><h4>AI 개발을 위한 기획 명세 작성</h4><p>개인적으로 구상한 게임의 <em>규칙과 처리 절차를 기획 문서로 구체화</em>했습니다. 이후 Codex가 각 기능의 조건과 처리 결과를 참조할 수 있도록 <em>개발용 명세로 정리</em>하여 구현 기준을 전달했습니다.</p></div>
 <div class="ai-case-point"><h4>기획 명세를 활용한 프로토타입 제작</h4><p>OneFingerRace에서는 <em>속도·조향량에 따른 차량의 언더스티어·오버스티어 발생 규칙</em>을, Prototype_Tango에서는 <em>이동 범위와 행동력에 따른 이동 가능 범위 및 명령 처리 규칙</em>을 설계했습니다.</p><p>작성한 명세를 Codex에 제공해 스크립트를 생성하고, Unity에서 동작을 확인하며 <em>플레이 가능한 프로토타입</em>을 제작했습니다.</p></div>
 </div>
-<figure class="ai-case-figure"><a href="assets/ai-game-prototypes.png" target="_blank" rel="noopener noreferrer" aria-label="자체 게임 제작 사례 이미지 원본 보기 (새 탭)"><img src="assets/ai-game-prototypes.png" alt="OneFingerRace 모바일 레이싱의 조향 규칙과 Unity 구현, Prototype Tango RTS의 이동 범위·행동력 명세와 프로토타입 화면" loading="lazy" width="956" height="622"></a></figure>
+<div class="ai-project-gallery">
+<figure class="ai-case-figure"><h4 class="ai-project-title">OneFingerRace (레이싱)</h4><a href="assets/ai-onefinger-race.png" target="_blank" rel="noopener noreferrer" aria-label="OneFingerRace (레이싱) 이미지 원본 보기 (새 탭)"><img src="assets/ai-onefinger-race.png" alt="차량 조향 규칙 기획 명세와 Unity 구현 및 모바일 레이싱 플레이 화면" loading="lazy" width="1292" height="328"></a></figure>
+<figure class="ai-case-figure"><h4 class="ai-project-title">Prototype_Tango (RTS)</h4><a href="assets/ai-prototype-tango.png" target="_blank" rel="noopener noreferrer" aria-label="Prototype_Tango (RTS) 이미지 원본 보기 (새 탭)"><img src="assets/ai-prototype-tango.png" alt="이동 범위·행동력에 따른 명령 처리 규칙과 RTS 프로토타입 화면" loading="lazy" width="1244" height="339"></a></figure>
+</div>
 </div>
 </article>
 <article class="ai-case">
