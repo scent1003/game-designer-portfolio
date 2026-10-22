@@ -26,6 +26,7 @@ header{position:sticky;top:0;z-index:30;border-bottom:1px solid #1e2826;backgrou
 .hero p{max-width:560px;font-size:17px;line-height:1.9;color:#b4bfbb}
 .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:38px}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:14px;padding:16px 23px;font-size:13px;font-weight:850;border:1px solid #58635f;background:transparent;color:#fff;cursor:pointer;transition:.2s} .btn:hover{transform:translateY(-2px)} .btn.primary{background:var(--mint);border-color:var(--mint);color:#05100f} .btn.disabled{opacity:.45;pointer-events:none}
+.hero-downloads{display:flex;flex-wrap:wrap;gap:12px;margin-top:12px}
 .hero-art{height:470px;position:relative;overflow:hidden;background:linear-gradient(145deg,#162220,#071010 70%);border:1px solid #273432} .hero-art:before{content:'';position:absolute;inset:11%;border:1px solid #446b63;transform:rotate(-12deg)} .hero-art:after{content:'';position:absolute;width:240px;height:240px;border:42px solid var(--mint);border-radius:50%;right:-88px;top:42px;filter:drop-shadow(0 0 42px #19d7c030)} .art-grid{position:absolute;inset:0;background-image:linear-gradient(#7fffe713 1px,transparent 1px),linear-gradient(90deg,#7fffe713 1px,transparent 1px);background-size:38px 38px} .art-index{position:absolute;top:28px;left:30px;font-size:12px;letter-spacing:.22em;color:#b4c8c2} .art-main{position:absolute;left:32px;bottom:34px;font-size:clamp(100px,12vw,188px);font-weight:900;letter-spacing:-.13em;line-height:.88;color:#edf1f0} .art-main span{color:var(--mint)} .art-foot{position:absolute;right:28px;bottom:28px;font-size:10px;letter-spacing:.22em;color:#adc0ba;writing-mode:vertical-rl}
 .strip{border-top:1px solid #22302c;border-bottom:1px solid #22302c;background:#101716} .strip-inner{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;padding:22px 0;color:#a2afa9;font-size:12px;font-weight:780;letter-spacing:.14em} .strip-inner strong{color:var(--mint)}
 section{scroll-margin-top:94px} .section{padding:120px 0 10px} .section-head{display:flex;align-items:end;justify-content:space-between;gap:34px;margin-bottom:38px} .section-head h2{margin:15px 0 0;font-size:clamp(35px,4vw,56px);letter-spacing:-.055em;line-height:1.12} .section-head p{margin:0;max-width:440px;font-size:14px;line-height:1.85;color:#889694}
@@ -122,6 +123,8 @@ footer{border-top:1px solid #24302c;padding:24px 0;color:#7c8884;font-size:12px}
 .ai-case-point h4{margin:0 0 12px;color:var(--mint);font-size:18px;line-height:1.5}
 .ai-case-point p{margin:0 0 12px;color:#c4cdca;font-size:15px;line-height:1.9;word-break:keep-all;overflow-wrap:anywhere}
 .ai-case-point em{font-style:normal;color:var(--mint)}
+.ai-review-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;align-items:start;min-width:0}
+@media(max-width:680px){.ai-review-gallery{grid-template-columns:1fr;gap:22px}}
 .ai-project-gallery{display:grid;gap:22px;min-width:0}
 .ai-project-title{margin:0;padding:10px 12px;background:var(--mint);color:#04110e;text-align:center;font-size:14px;font-weight:800;line-height:1.5}
 .ai-case-figure{margin:0;min-width:0;border:1px solid #31433e;background:#0d0d0d}
@@ -215,6 +218,10 @@ footer{border-top:1px solid #24302c;padding:24px 0;color:#7c8884;font-size:12px}
 <div class="cta">
 <a class="btn primary" href="#about">자기소개 보기 <span>↘</span></a>
 <a class="btn" href="#portfolio">포트폴리오 보기 <span>↗</span></a>
+</div>
+<div class="hero-downloads" aria-label="소개 문서 다운로드">
+<a class="btn primary" href="assets/하광선_포트폴리오_개요.pdf" download="하광선_포트폴리오_개요.pdf">포트폴리오 개요 PDF 다운로드 <span aria-hidden="true">↓</span></a>
+<a class="btn primary" href="assets/하광선_이력서.pdf" download="하광선_이력서.pdf">이력서 다운로드 <span aria-hidden="true">↓</span></a>
 </div>
 </div>
 <div aria-label="세 가지 퍼스널 컬러로 구성한 장식 그래픽" class="hero-art">
@@ -369,29 +376,33 @@ footer{border-top:1px solid #24302c;padding:24px 0;color:#7c8884;font-size:12px}
 <section class="shell section" id="ai-workflow">
 <div class="section-head">
 <div><div class="mini">04 / AI WORKFLOW</div><h2>AI 활용</h2></div>
-<p>직접 작성한 기획 명세를 바탕으로 프로토타입을 제작하고, AI와의 검토를 통해 기획 문서를 구체화했습니다.</p>
+<p>AI와 함께 데이터 참조 관계와 시스템 처리 절차를 검토하며 기획서를 작성하고, 직접 정리한 기획 명세를 바탕으로 플레이 가능한 프로토타입을 제작했습니다.</p>
 </div>
 <article class="ai-case">
-<h3 class="ai-case-title">AI <span>(자체 게임 제작)</span></h3>
+<h3 class="ai-case-title">AI 자체 게임 제작</h3>
 <div class="ai-case-layout">
 <div class="ai-case-copy">
-<div class="ai-case-point"><h4>AI 개발을 위한 기획 명세 작성</h4><p>개인적으로 구상한 게임의 <em>규칙과 처리 절차를 기획 문서로 구체화</em>했습니다. 이후 Codex가 각 기능의 조건과 처리 결과를 참조할 수 있도록 <em>개발용 명세로 정리</em>하여 구현 기준을 전달했습니다.</p></div>
-<div class="ai-case-point"><h4>기획 명세를 활용한 프로토타입 제작</h4><p>OneFingerRace에서는 <em>속도·조향량에 따른 차량의 언더스티어·오버스티어 발생 규칙</em>을, Prototype_Tango에서는 <em>이동 범위와 행동력에 따른 이동 가능 범위 및 명령 처리 규칙</em>을 설계했습니다.</p><p>작성한 명세를 Codex에 제공해 스크립트를 생성하고, Unity에서 동작을 확인하며 <em>플레이 가능한 프로토타입</em>을 제작했습니다.</p></div>
+<div class="ai-case-point"><h4>AI 개발을 위한 기획 명세 작성</h4><p>개인적으로 구상한 게임의 <em>규칙과 처리 절차를 기획 문서로 구체화</em>했습니다.<br>이후 Codex가 각 기능의 조건과 처리 결과를 참조할 수 있도록 <em>개발용 명세로 정리</em>하여 구현 기준을 전달했습니다.</p></div>
+<div class="ai-case-point"><h4>기획 명세를 활용한 프로토타입 제작</h4><p>OneFingerRace에서는 <em>속도·조향량에 따른 차량의 언더스티어·오버스티어 발생 규칙</em>을, Prototype_Tango에서는 <em>이동 범위와 행동력에 따른 이동 가능 범위 및 명령 처리 규칙</em>을 설계했습니다.<br>작성한 명세를 Codex에 제공해 스크립트를 생성하고, Unity에서 동작을 확인하며 <em>플레이 가능한 프로토타입</em>을 제작했습니다.</p></div>
 </div>
 <div class="ai-project-gallery">
-<figure class="ai-case-figure"><h4 class="ai-project-title">OneFingerRace (레이싱)</h4><a href="assets/ai-onefinger-race.png" target="_blank" rel="noopener noreferrer" aria-label="OneFingerRace (레이싱) 이미지 원본 보기 (새 탭)"><img src="assets/ai-onefinger-race.png" alt="차량 조향 규칙 기획 명세와 Unity 구현 및 모바일 레이싱 플레이 화면" loading="lazy" width="1292" height="328"></a></figure>
+<figure class="ai-case-figure"><h4 class="ai-project-title">OneFingerRace (레이싱)</h4><a href="assets/ai-onefinger-race.png" target="_blank" rel="noopener noreferrer" aria-label="OneFingerRace (레이싱) 이미지 원본 보기 (새 탭)"><img src="assets/ai-onefinger-race.png" alt="차량 조향 규칙 기획 명세와 Unity 구현 및 모바일 레이싱 플레이 화면" loading="lazy" width="1292" height="344"></a></figure>
 <figure class="ai-case-figure"><h4 class="ai-project-title">Prototype_Tango (RTS)</h4><a href="assets/ai-prototype-tango.png" target="_blank" rel="noopener noreferrer" aria-label="Prototype_Tango (RTS) 이미지 원본 보기 (새 탭)"><img src="assets/ai-prototype-tango.png" alt="이동 범위·행동력에 따른 명령 처리 규칙과 RTS 프로토타입 화면" loading="lazy" width="1244" height="339"></a></figure>
 </div>
 </div>
 </article>
 <article class="ai-case">
-<h3 class="ai-case-title">AI <span>(기획서 검토 및 보완)</span></h3>
+<h3 class="ai-case-title">AI 기획서 작성</h3>
 <div class="ai-case-layout">
 <div class="ai-case-copy">
-<div class="ai-case-point"><h4>대화를 통한 규칙과 누락 항목 검토</h4><p>몬스터 AI의 <em>스킬 테이블 ID 연결 여부</em>, 던전 입장 검사의 <em>누락된 조건</em> 등 문서의 규칙과 처리 흐름을 AI와 함께 검토했습니다.</p></div>
-<div class="ai-case-point"><h4>검토 결과를 실제 기획서에 적용</h4><p>간략한 설명을 구성하는 데 필요한 <em>변수와 타입</em>을 검토하고, 확인한 내용을 상태 흐름과 데이터 테이블에 반영했습니다. AI의 제안은 직접 확인한 뒤 기획 의도에 맞게 문서를 보완했습니다.</p></div>
+<div class="ai-case-point"><h4>데이터 호출 및 참조 관계의 명확화</h4><p>AI가 스킬 리스트 ID를 일반적인 <em>외래 키(FK) 관계</em>로 설명해 기존 설계 의도가 전달되지 않았습니다.<br><em>동일한 SkillListID에 속한 여러 SkillID를 묶어 호출하는 방식</em>을 다시 설명하고, <em>참조 ID와 호출 ID</em>를 구분해 Skill 테이블과 관련 테이블의 설명을 수정했습니다.</p></div>
+<div class="ai-case-point"><h4>시스템 처리 절차의 누락 검토</h4><p>던전 입장 판단 과정에서 <em>파티원별 조건 확인 결과를 종합하는 절차</em>가 누락된 것을 발견했습니다.<br><em>모든 파티원이 입장 조건을 만족했는지</em> 확인하도록 수정을 요청하고, 변경된 처리 흐름을 기획서에 반영했습니다.</p></div>
+<div class="ai-case-point"><h4>한 페이지에서 이해할 수 있도록 구성</h4><p>데이터 표를 정리하는 과정에서 <em>Enum 설명이 차지하는 분량</em>으로 인해 한 페이지에서 내용을 전달하기 어렵다고 판단했습니다.<br><em>Bool·String으로 변경할 수 있는 항목</em>을 검토하도록 요청하고, 필요한 값, 의미를 유지하면서 설명을 간결하게 구성할 수 있는지 확인했습니다.</p></div>
 </div>
-<figure class="ai-case-figure"><a href="assets/ai-document-review.png" target="_blank" rel="noopener noreferrer" aria-label="기획서 검토 및 적용 사례 이미지 원본 보기 (새 탭)"><img src="assets/ai-document-review.png" alt="AI와 사용자 간의 대화에서 스킬 테이블 연결과 입장 검사 누락을 검토하고, 기획서의 상태 흐름 및 데이터 테이블에 적용한 사례" loading="lazy" width="949" height="620"></a></figure>
+<div class="ai-review-gallery">
+<figure class="ai-case-figure"><h4 class="ai-project-title">AI와 사용자 간의 대화 내용</h4><a href="assets/ai-planning-conversation.png" target="_blank" rel="noopener noreferrer" aria-label="AI와 사용자 간의 대화 내용 이미지 원본 보기 (새 탭)"><img src="assets/ai-planning-conversation.png" alt="스킬 테이블 ID 연결, 던전 입장 검사 누락 및 변수 타입에 대한 AI 대화 검토" loading="lazy" width="563" height="772"></a></figure>
+<figure class="ai-case-figure"><h4 class="ai-project-title">실제 적용 예시 (기획서에 적용)</h4><a href="assets/ai-planning-application.png" target="_blank" rel="noopener noreferrer" aria-label="실제 적용 예시 (기획서에 적용) 이미지 원본 보기 (새 탭)"><img src="assets/ai-planning-application.png" alt="스킬 데이터 참조 관계와 던전 입장 판단 흐름 및 데이터 테이블에 반영한 기획서" loading="lazy" width="693" height="736"></a></figure>
+</div>
 </div>
 </article>
 </section>
@@ -434,7 +445,7 @@ const teamDetails={
    {mode:'normal',label:'노말 모드'},
    {mode:'hard',label:'하드 모드'}
   ],
-  overview:[['개발 기간','2024.08 ~ 2024.11'],['게임 개요','대시(Dash)를 이용해 장애물을 회피하는 사이드뷰 러닝 액션 게임'],['개인 담당','난이도별 레벨 디자인'],['성과','2024 G-STAR 출품']],
+  overview:[['개발 기간','2024.08 ~ 2024.11'],['게임 개요','대시(Dash)를 이용해 장애물을 회피하는 사이드뷰 러닝 액션 게임'],['개인 담당','난이도별 레벨 디자인'],['성과','2024 G-STAR 전시']],
   work:[
    ['대시 조작의 특성을 활용한 레벨 구성','좁은 장애물 사이를 통과하는 <em>정밀한 대시 조작</em>과 연속적인 빠른 입력을 요구하는 <em>신속한 대시 조작</em>으로 도전 요소를 구분했습니다. 각 조작 방식에 맞춰 장애물을 배치하여 서로 다른 조작 능력을 요구하는 레벨을 구성했습니다.'],
    ['조작 숙련도에 따른 난이도 구분','이지·노말·하드의 3가지 난이도를 구성했습니다. 이지 모드는 <em>5~7세 어린이도 플레이할 수 있는 난이도</em>를 목표로 제작했으며, 노말·하드 모드는 더 높은 조작 숙련도를 요구하도록 장애물을 배치했습니다.']]
