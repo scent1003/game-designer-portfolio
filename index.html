@@ -219,12 +219,11 @@ footer{border-top:1px solid #24302c;padding:24px 0;color:#7c8884;font-size:12px}
 <h1>게임의 규칙을<br/><em>구조로 설계</em>합니다.</h1>
 <p>게임 시스템과 콘텐츠의 동작 원리를 분석하고, 명확한 규칙과 데이터 구조로 정리하는 게임 기획자 하광선의 포트폴리오입니다.</p>
 <div class="cta">
-<a class="btn primary" href="#about">자기소개 보기 <span>↘</span></a>
-<a class="btn" href="#portfolio">포트폴리오 보기 <span>↗</span></a>
+<a class="btn primary" href="#about">자기소개 보기 <span>↗</span></a>
 </div>
 <div class="hero-downloads" aria-label="소개 문서 다운로드">
-<a class="btn primary" href="assets/하광선_포트폴리오_개요.pdf" download="하광선_포트폴리오_개요.pdf">포트폴리오 개요 PDF 다운로드 <span aria-hidden="true">↓</span></a>
-<a class="btn primary" href="assets/하광선_이력서.pdf" download="하광선_이력서.pdf">이력서 다운로드 <span aria-hidden="true">↓</span></a>
+<a class="btn primary" href="assets/하광선_포트폴리오_개요.pdf" download="하광선_포트폴리오_개요.pdf">포트폴리오 개요 PDF 다운로드 <span aria-hidden="true">↗</span></a>
+<a class="btn primary" href="assets/하광선_이력서.pdf" download="하광선_이력서.pdf">이력서 다운로드 <span aria-hidden="true">↗</span></a>
 </div>
 </div>
 <div aria-label="세 가지 퍼스널 컬러로 구성한 장식 그래픽" class="hero-art">
@@ -429,7 +428,7 @@ footer{border-top:1px solid #24302c;padding:24px 0;color:#7c8884;font-size:12px}
 <section class="shell contact" id="contact">
 <div class="mini">06 / CONTACT</div>
 <h2>LET'S <span>CONNECT.</span></h2>
-<p>연락처와 외부 이력서 / 배포 링크를 연결하는 영역입니다. 현재는 기본 이메일 버튼만 배치했습니다.</p>
+
 <a class="btn primary" href="mailto:hakangs730@naver.com">이메일 보내기 ↗</a>
 </section>
 </main>
@@ -802,7 +801,7 @@ function openProject(kind, slug){
       soulworker: '소울워커 보스 몬스터 컨셉 기획.pdf',
       monster: 'MMORPG 일반 몬스터 AI.pdf'
     };
-    const pdfDownloadButton = actionButton(item.pdf,'PDF 다운로드 ↓',true,false,false,true);
+    const pdfDownloadButton = actionButton(item.pdf,'PDF 다운로드 ↗',true,false,false,true);
     pdfDownloadButton.setAttribute('download', downloadNames[item.slug] || '기획서.pdf');
     actions.appendChild(pdfDownloadButton);
     actions.appendChild(actionButton(item.pdf,'PDF 열람 ↗',false,true));
