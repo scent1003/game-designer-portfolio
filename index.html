@@ -26,6 +26,7 @@ header{position:sticky;top:0;z-index:30;border-bottom:1px solid #1e2826;backgrou
 .hero p{max-width:560px;font-size:17px;line-height:1.9;color:#b4bfbb}
 .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:38px}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:14px;padding:16px 23px;font-size:13px;font-weight:850;border:1px solid #58635f;background:transparent;color:#fff;cursor:pointer;transition:.2s} .btn:hover{transform:translateY(-2px)} .btn.primary{background:var(--mint);border-color:var(--mint);color:#05100f} .btn.disabled{opacity:.45;pointer-events:none}
+.hero-name{color:var(--mint)}
 .hero-downloads{display:flex;flex-wrap:wrap;gap:12px;margin-top:12px}
 .hero-art{height:470px;position:relative;overflow:hidden;background:linear-gradient(145deg,#162220,#071010 70%);border:1px solid #273432} .hero-art:before{content:'';position:absolute;inset:11%;border:1px solid #446b63;transform:rotate(-12deg)} .hero-art:after{content:'';position:absolute;width:240px;height:240px;border:42px solid var(--mint);border-radius:50%;right:-88px;top:42px;filter:drop-shadow(0 0 42px #19d7c030)} .art-grid{position:absolute;inset:0;background-image:linear-gradient(#7fffe713 1px,transparent 1px),linear-gradient(90deg,#7fffe713 1px,transparent 1px);background-size:38px 38px} .art-index{position:absolute;top:28px;left:30px;font-size:12px;letter-spacing:.22em;color:#b4c8c2} .art-main{position:absolute;left:32px;bottom:34px;font-size:clamp(100px,12vw,188px);font-weight:900;letter-spacing:-.13em;line-height:.88;color:#edf1f0} .art-main span{color:var(--mint)} .art-foot{position:absolute;right:28px;bottom:28px;font-size:10px;letter-spacing:.22em;color:#adc0ba;writing-mode:vertical-rl}
 .strip{border-top:1px solid #22302c;border-bottom:1px solid #22302c;background:#101716} .strip-inner{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;padding:22px 0;color:#a2afa9;font-size:12px;font-weight:780;letter-spacing:.14em} .strip-inner strong{color:var(--mint)}
@@ -88,9 +89,8 @@ footer{border-top:1px solid #24302c;padding:24px 0;color:#7c8884;font-size:12px}
 @media(max-width:720px){.game-catalog{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;padding:0}.game-group,.game-group:nth-child(n+4){grid-column:span 1}}
 @media(max-width:430px){.game-catalog{grid-template-columns:1fr}.game-group,.game-group:nth-child(n+4){grid-column:span 1}}
 .dialog-cover.has-intent{display:block;overflow-y:auto;overscroll-behavior:contain;scrollbar-gutter:stable}
-.dialog-cover.has-intent #dialog-img{position:static;inset:auto;width:100%;height:auto;aspect-ratio:1/1;object-fit:contain}
-.dialog-intent{margin:0;padding:0 16px 20px}
-.dialog-intent h3{margin:0;padding:10px 12px;background:var(--mint);color:#04110e;text-align:center;font-size:14px}
+.dialog-cover.has-intent #dialog-img{position:static;inset:auto;width:100%;height:auto;object-fit:contain}
+.dialog-intent{margin:1cm 0 0;padding:0 0 20px}
 .dialog-intent a{display:block;cursor:zoom-in}
 .dialog-cover .dialog-intent img{position:static;inset:auto;width:100%;height:auto;object-fit:contain}
 @media(max-width:680px){.project-dialog.has-intent{display:block;overflow-y:auto;overscroll-behavior:contain}.project-dialog.has-intent .dialog-cover{height:auto;overflow:visible}.project-dialog.has-intent #dialog-img{max-height:300px}.project-dialog.has-intent .dialog-info{overflow:visible}}
@@ -207,7 +207,7 @@ footer{border-top:1px solid #24302c;padding:24px 0;color:#7c8884;font-size:12px}
 <div class="topline"></div>
 <header>
 <div class="shell nav">
-<a class="brand" href="#home">Game <b>Design</b></a>
+<a class="brand" href="#home">하광선 <span>/</span> <b>Game Design</b></a>
 <nav class="links" id="nav">
 <a href="#about">ABOUT</a>
 <a href="#portfolio">PORTFOLIO</a>
@@ -222,9 +222,9 @@ footer{border-top:1px solid #24302c;padding:24px 0;color:#7c8884;font-size:12px}
 <main>
 <section class="shell hero" id="home">
 <div>
-<div class="eyebrow">GAME DESIGNER · PORTFOLIO 2026</div>
+<div class="eyebrow">GAME DESIGNER PORTFOLIO</div>
 <h1>게임의 규칙을<br/><em>구조로 설계</em>합니다.</h1>
-<p>게임 시스템과 콘텐츠의 동작 원리를 분석하고, 명확한 규칙과 데이터 구조로 정리하는 게임 기획자 하광선의 포트폴리오입니다.</p>
+<p>게임 시스템과 콘텐츠의 동작 원리를 분석하고, 명확한 규칙과 데이터 구조로 정리하는 게임 기획자 <strong class="hero-name">하광선</strong>의 포트폴리오입니다.</p>
 <div class="cta">
 <a class="btn primary" href="#about">자기소개 보기 <span>↗</span></a>
 </div>
@@ -443,7 +443,7 @@ footer{border-top:1px solid #24302c;padding:24px 0;color:#7c8884;font-size:12px}
 <div class="project-overlay" hidden="" id="project-overlay">
 <div aria-labelledby="project-title" aria-modal="true" class="project-dialog" role="dialog">
 <button aria-label="닫기" class="dialog-close" id="dialog-close" type="button">×</button>
-<div class="dialog-cover" id="dialog-cover"><img alt="선택한 표지" id="dialog-img"/><figure class="dialog-intent" id="dialog-intent" hidden><h3>기획 의도</h3><a id="dialog-intent-link" target="_blank" rel="noopener noreferrer"><img id="dialog-intent-img" alt=""/></a></figure></div>
+<div class="dialog-cover" id="dialog-cover"><img alt="선택한 표지" id="dialog-img"/><figure class="dialog-intent" id="dialog-intent" hidden><a id="dialog-intent-link" target="_blank" rel="noopener noreferrer"><img id="dialog-intent-img" alt=""/></a></figure></div>
 <div class="dialog-info">
 <div class="mini" id="dialog-type"></div>
 <div class="dialog-title-row"><h2 id="project-title"></h2><div class="dialog-title-actions" id="dialog-title-actions"></div></div>
