@@ -53,9 +53,9 @@ section{scroll-margin-top:94px} .section{padding:120px 0 10px} .section-head{dis
 .ai-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px} .ai-card{padding:28px;border:1px solid #313b38;background:#111817;min-height:220px} .ai-index{width:40px;height:40px;border:1px solid #41504c;display:grid;place-items:center;color:var(--mint);font-weight:850;font-size:13px;margin-bottom:24px} .ai-card h3{font-size:22px;line-height:1.35;letter-spacing:-.04em;margin:0 0 14px} .ai-card p{margin:0;color:#96a39f;font-size:14px;line-height:1.8}
 .contact{padding:130px 0 90px;text-align:center} .contact h2{font-size:clamp(44px,7vw,90px);line-height:1.1;letter-spacing:-.08em;margin:16px 0 22px} .contact h2 span{color:var(--mint)} .contact p{margin:0 auto 30px;max-width:560px;color:#9da9a5;line-height:1.8}
 footer{border-top:1px solid #24302c;padding:24px 0;color:#7c8884;font-size:12px} .foot{display:flex;justify-content:space-between;gap:18px}
-.project-overlay[hidden]{display:none} .project-overlay{position:fixed;inset:0;z-index:50;background:rgba(0,0,0,.82);display:grid;place-items:center;padding:28px;overflow:auto} .project-dialog{position:relative;width:min(1040px,100%);max-height:min(90vh,860px);overflow:auto;background:#111817;border:1px solid #51635d;display:grid;grid-template-columns:minmax(240px,.85fr) 1.15fr;box-shadow:0 25px 80px #000a} .dialog-close{position:absolute;top:12px;right:14px;z-index:3;background:var(--mint);border:0;color:#04100e;font-size:28px;width:40px;height:40px;cursor:pointer} .dialog-cover{background:#f6f6f6} .dialog-cover img{width:100%;height:100%;max-height:760px;object-fit:contain} .dialog-info{padding:64px 40px 34px} .dialog-info h2{font-size:clamp(25px,3vw,37px);line-height:1.35;letter-spacing:-.05em;margin:16px 0 24px} .dialog-section h3{font-size:13px;letter-spacing:.16em;color:var(--mint);margin:0 0 10px} .dialog-section p{margin:0 0 24px;color:#c4cdca;font-size:15px;line-height:1.9} .dialog-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px} .dialog-meta{margin-top:18px;font-size:12px;color:#7f8a86}
+.project-overlay[hidden]{display:none} .project-overlay{position:fixed;inset:0;z-index:50;background:rgba(0,0,0,.82);display:grid;place-items:center;padding:28px;overflow:auto} .project-dialog{position:relative;width:min(1040px,100%);max-height:min(90vh,860px);overflow:hidden;background:#111817;border:1px solid #51635d;display:grid;grid-template-columns:minmax(240px,.85fr) 1.15fr;box-shadow:0 25px 80px #000a} .dialog-close{position:absolute;top:12px;right:14px;z-index:3;background:var(--mint);border:0;color:#04100e;font-size:28px;width:40px;height:40px;cursor:pointer} .dialog-cover{background:#000;min-height:0;display:flex;align-items:center;justify-content:center;overflow:hidden} .dialog-cover img{display:block;width:100%;height:100%;max-height:100%;object-fit:contain} .dialog-info{padding:64px 40px 34px;min-height:0;overflow-y:auto;overscroll-behavior:contain} .dialog-info h2{font-size:clamp(25px,3vw,37px);line-height:1.35;letter-spacing:-.05em;margin:16px 0 24px} .dialog-section h3{font-size:13px;letter-spacing:.16em;color:var(--mint);margin:0 0 10px} .dialog-section p{margin:0 0 24px;color:#c4cdca;font-size:15px;line-height:1.9} .dialog-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px} .dialog-meta{margin-top:18px;font-size:12px;color:#7f8a86}
 @media(max-width:1100px){.shell{width:min(100% - 44px,900px)}.hero{grid-template-columns:1fr;gap:26px;padding:76px 0 28px;min-height:0}.hero-art{height:310px}.section,.about-shell{padding-top:88px}.about-card{grid-template-columns:1fr}.about-side{padding:28px}.info-grid{grid-template-columns:1fr}.grid-3{grid-template-columns:1fr 1fr}.ai-grid{grid-template-columns:1fr 1fr}.band{margin-top:90px;padding:90px 0 86px}.links{gap:16px}.links a{font-size:11px}}
-@media(max-width:680px){.shell{width:calc(100% - 32px)}.nav{height:66px}.brand{font-size:17px} #menu{display:block} .links{display:none;position:absolute;top:67px;left:0;right:0;background:#101716;padding:25px;flex-direction:column;align-items:flex-start} .links.open{display:flex} .hero h1{font-size:48px} .hero p{font-size:14px} .hero-art{height:255px} .art-main{font-size:120px} .strip-inner{gap:12px;font-size:10px} .section-head{display:block} .section-head p{margin-top:16px} .about-main{padding:28px 22px} .about-title{font-size:34px} .grid-3,.ai-grid{grid-template-columns:1fr} .foot{flex-direction:column} .project-overlay{padding:12px;align-items:flex-start} .project-dialog{grid-template-columns:1fr;max-height:95vh} .dialog-cover{height:min(66vw,320px)} .dialog-info{padding:28px 22px} .dialog-close{top:8px;right:8px} .dialog-actions .btn{flex:1}}
+@media(max-width:680px){.shell{width:calc(100% - 32px)}.nav{height:66px}.brand{font-size:17px} #menu{display:block} .links{display:none;position:absolute;top:67px;left:0;right:0;background:#101716;padding:25px;flex-direction:column;align-items:flex-start} .links.open{display:flex} .hero h1{font-size:48px} .hero p{font-size:14px} .hero-art{height:255px} .art-main{font-size:120px} .strip-inner{gap:12px;font-size:10px} .section-head{display:block} .section-head p{margin-top:16px} .about-main{padding:28px 22px} .about-title{font-size:34px} .grid-3,.ai-grid{grid-template-columns:1fr} .foot{flex-direction:column} .project-overlay{padding:12px;align-items:flex-start} .project-dialog{grid-template-columns:1fr;grid-template-rows:min(34vw,180px) minmax(0,1fr);max-height:95vh} .dialog-cover{height:100%} .dialog-info{padding:28px 22px} .dialog-close{top:8px;right:8px} .dialog-actions .btn{flex:1}}
 
 /* About section: tool logos and portfolio history */
 .tool-icons{display:flex;flex-wrap:wrap;gap:12px 17px;align-items:flex-start}
@@ -86,6 +86,10 @@ footer{border-top:1px solid #24302c;padding:24px 0;color:#7c8884;font-size:12px}
 .play-frame{border:0;background:transparent}
 @media(max-width:720px){.game-catalog{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;padding:0}.game-group,.game-group:nth-child(n+4){grid-column:span 1}}
 @media(max-width:430px){.game-catalog{grid-template-columns:1fr}.game-group,.game-group:nth-child(n+4){grid-column:span 1}}
+.team-work-image{margin:24px 0;background:#0d0d0d;border:1px solid #31433e}
+.team-work-image a{display:block;cursor:zoom-in}
+.team-work-image img{display:block;width:100%;height:auto}
+.team-work-image figcaption{padding:10px 12px;color:#aebdb7;font-size:12px;line-height:1.7}
 </style>
 <style>
 /* Additional game art supplied by the portfolio owner. */
@@ -338,7 +342,7 @@ footer{border-top:1px solid #24302c;padding:24px 0;color:#7c8884;font-size:12px}
 <div class="mini" id="dialog-type"></div>
 <h2 id="project-title"></h2>
 <div class="dialog-section"><h3>소개</h3><p id="dialog-intro"></p></div>
-<div class="dialog-section"><h3>주요 내용</h3><p id="dialog-detail"></p></div>
+<div class="dialog-section"><h3>주요 내용</h3><div id="dialog-detail"></div></div>
 <div class="dialog-actions" id="dialog-actions"></div>
 <p class="dialog-meta" id="dialog-meta"></p>
 </div>
@@ -350,18 +354,25 @@ const overviewExplanations={"monster": [["몬스터 제작에 재사용하는 �
 
 const teamDetails={
  dash:{
+  workImages:[{src:'assets/dash-level-design.png',title:'난이도별 레벨 디자인 비교',alt:'Dash Dash Dash 레벨 디자인: 이지·노말·하드 모드의 장애물 배치 비교'}],
   overview:[['개발 기간','2024.08 ~ 2024.11'],['게임 개요','대시(Dash)를 이용해 장애물을 회피하는 사이드뷰 러닝 액션 게임'],['개인 담당','난이도별 레벨 디자인'],['성과','2024 G-STAR 출품']],
   work:[
    ['대시 조작의 특성을 활용한 레벨 구성','좁은 장애물 사이를 통과하는 정밀한 대시 조작과 연속적인 빠른 입력을 요구하는 신속한 대시 조작으로 도전 요소를 구분했습니다. 각 조작 방식에 맞춰 장애물을 배치하여 서로 다른 조작 능력을 요구하는 레벨을 구성했습니다.'],
    ['조작 숙련도에 따른 난이도 구분','이지·노말·하드의 3가지 난이도를 구성했습니다. 이지 모드는 5~7세 어린이도 플레이할 수 있는 난이도를 목표로 제작했으며, 노말·하드 모드는 더 높은 조작 숙련도를 요구하도록 장애물을 배치했습니다.']]
  },
  jump:{
+  workImages:[{src:'assets/jumper-level-design.png',title:'프로젝트 점퍼 · 레벨 디자인',alt:'프로젝트 점퍼 레벨 디자인: 목표 발견, 다음 목표와 경로 확인, 수집 경로 선택, 레버 작동으로 경로 개방'}],
   overview:[['개발 기간','2024.12 ~ 2025.11'],['게임 개요','지형을 탐색하고 별을 수집하며 진행하는 3D 플랫포머 게임'],['개인 담당','시스템 기획 · 플레이어 조작 방식 설계 · 프로젝트 팀장']],
   work:[
    ['플레이어 조작 방식 설계','플레이어의 이동과 점프 등 주요 조작 방식과 진행 규칙을 설계했습니다.'],
    ['진행 흐름 및 협업 조율','목표와 이동 경로를 단계적으로 인지하도록 레벨 진행 방향을 구성했으며, 프로젝트 팀장으로서 작업 범위와 일정을 조율했습니다.']]
  },
  moon:{
+  workImages:[
+   {src:'assets/moon-camera-system.png',title:'월하일검 · 카메라 시스템 기획',alt:'월하일검 카메라 시스템 기획: 자유 시점과 타깃 록온 시점 설계 및 카메라 조작 컴포넌트'},
+   {src:'assets/moon-animation-editing.png',title:'월하일검 · 애니메이션 편집',alt:'월하일검 애니메이션 편집: IK 리타게팅, 공격·스킬·피격 몽타주 구성 및 컨트롤 릭과 시퀀서 편집'},
+   {src:'assets/moon-combat-balance.png',title:'월하일검 · 전투 밸런스 디자인',alt:'월하일검 전투 밸런스 디자인: 패리 입력 허용 시간과 적 공격 선딜 조정, 보스별 요구 행동과 학습 단계'}
+  ],
   overview:[['개발 기간','2026.03 ~ 2026.11 (예정)'],['게임 개요','패링과 잠입을 활용하는 3인칭 액션 게임'],['개인 담당','애니메이션 편집 · 전투 밸런싱']],
   work:[
    ['전투 애니메이션 개선','공격 모션의 선딜과 후딜, 자세 전환의 자연스러움을 점검하고 애니메이션 키프레임·블렌딩을 조정했습니다.'],
@@ -440,6 +451,24 @@ function openProject(kind, slug){
     detail.closest('.dialog-section').hidden=false;
     detail.closest('.dialog-section').querySelector('h3').textContent='개인 작업 내용';
     detail.innerHTML=team.work.map(([heading,body])=>`<div class="team-work-point"><h4>${heading}</h4><p>${body}</p></div>`).join('');
+    for(const image of team.workImages || []){
+      const figure=document.createElement('figure');
+      figure.className='team-work-image';
+      const link=document.createElement('a');
+      link.href=image.src;
+      link.target='_blank';
+      link.rel='noopener noreferrer';
+      link.setAttribute('aria-label',image.title+' 이미지 원본 보기 (새 탭)');
+      const img=document.createElement('img');
+      img.src=image.src;
+      img.alt=image.alt;
+      img.loading='lazy';
+      link.appendChild(img);
+      const caption=document.createElement('figcaption');
+      caption.textContent=image.title+' · 이미지를 클릭하면 원본을 볼 수 있습니다.';
+      figure.append(link,caption);
+      detail.appendChild(figure);
+    }
   } else {
     intro.closest('.dialog-section').hidden=false;
     intro.hidden=false;
@@ -472,6 +501,7 @@ function openProject(kind, slug){
     }
   }
   overlay.hidden=false;
+  document.querySelector('.dialog-info').scrollTop=0;
   document.body.style.overflow='hidden';
   closeDialog.focus();
 }
