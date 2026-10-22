@@ -86,14 +86,14 @@ footer{border-top:1px solid #24302c;padding:24px 0;color:#7c8884;font-size:12px}
 .play-frame{border:0;background:transparent}
 @media(max-width:720px){.game-catalog{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;padding:0}.game-group,.game-group:nth-child(n+4){grid-column:span 1}}
 @media(max-width:430px){.game-catalog{grid-template-columns:1fr}.game-group,.game-group:nth-child(n+4){grid-column:span 1}}
-.team-work-image{margin:24px 0;background:#0d0d0d;border:1px solid #31433e}
+.team-work-image{margin:24px 0;background:transparent;border:0}
 .team-work-image a{display:block;cursor:zoom-in}
 .team-work-point p em{font-style:normal;color:var(--mint)}
 .team-level-description{padding:20px 18px 4px}
 .team-level-description .team-work-point{border-left:0;padding-left:16px;position:relative}
 .team-level-description .team-work-point::before{content:'•';position:absolute;left:0;top:0;color:var(--mint)}
 .team-level-description .team-work-point p{color:#e0e6e3}
-.team-work-heading{margin:0;padding:16px 18px;color:var(--mint);font-size:20px;line-height:1.5;border-bottom:1px solid #31433e}
+.team-work-heading{margin:0 0 22px;padding:0;color:var(--mint);font-size:20px;line-height:1.5}
 .team-work-visual{position:relative;overflow:hidden;background:#0d0d0d}
 .team-work-image .team-work-visual img{position:absolute;max-width:none;height:auto}
 .team-work-image img{display:block;width:100%;height:auto}
@@ -112,6 +112,14 @@ footer{border-top:1px solid #24302c;padding:24px 0;color:#7c8884;font-size:12px}
 .ai-case-figure figcaption{padding:12px 16px;color:#aebdb7;font-size:12px;line-height:1.8}
 @media(max-width:900px){.ai-case-layout{grid-template-columns:1fr}.ai-case{padding:24px}.ai-case-title{margin-bottom:24px}}
 @media(max-width:680px){.ai-case{padding:20px 16px;margin-top:28px}.ai-case-layout{gap:22px}.ai-case-point h4{font-size:17px}}
+
+/* AI 활용: 플레이·전시 이력과 동일한 제목 구분선과 열린 레이아웃 */
+#ai-workflow .ai-case{margin-top:74px;padding:7px 0 0;background:transparent;border:0}
+#ai-workflow .ai-case-title{margin-bottom:26px;font-size:clamp(28px,3vw,43px);font-weight:850;line-height:normal;letter-spacing:-.05em}
+#ai-workflow .ai-case-layout{grid-template-columns:minmax(240px,.42fr) minmax(0,.88fr);gap:34px}
+#ai-workflow .ai-case-figure{border:0;background:transparent}
+@media(max-width:900px){#ai-workflow .ai-case{margin-top:52px}#ai-workflow .ai-case-layout{grid-template-columns:1fr}}
+@media(max-width:680px){#ai-workflow .ai-case-layout{gap:22px}}
 
 .engine-case-visual{position:relative;overflow:hidden;background:#0d0d0d}
 .engine-case-visual img{position:absolute;max-width:none;height:auto}
@@ -352,7 +360,7 @@ footer{border-top:1px solid #24302c;padding:24px 0;color:#7c8884;font-size:12px}
 <div class="ai-case-point"><h4>AI 개발을 위한 기획 명세 작성</h4><p>개인적으로 구상한 게임의 <em>규칙과 처리 절차를 기획 문서로 구체화</em>했습니다. 이후 Codex가 각 기능의 조건과 처리 결과를 참조할 수 있도록 <em>개발용 명세로 정리</em>하여 구현 기준을 전달했습니다.</p></div>
 <div class="ai-case-point"><h4>기획 명세를 활용한 프로토타입 제작</h4><p>OneFingerRace에서는 <em>속도·조향량에 따른 차량의 언더스티어·오버스티어 발생 규칙</em>을, Prototype_Tango에서는 <em>이동 범위와 행동력에 따른 이동 가능 범위 및 명령 처리 규칙</em>을 설계했습니다.</p><p>작성한 명세를 Codex에 제공해 스크립트를 생성하고, Unity에서 동작을 확인하며 <em>플레이 가능한 프로토타입</em>을 제작했습니다.</p></div>
 </div>
-<figure class="ai-case-figure"><a href="assets/ai-game-prototypes.png" target="_blank" rel="noopener noreferrer" aria-label="자체 게임 제작 사례 이미지 원본 보기 (새 탭)"><img src="assets/ai-game-prototypes.png" alt="OneFingerRace 모바일 레이싱의 조향 규칙과 Unity 구현, Prototype Tango RTS의 이동 범위·행동력 명세와 프로토타입 화면" loading="lazy" width="956" height="622"></a><figcaption>OneFingerRace · Prototype_Tango — 기획 명세와 구현 사례<br>이미지를 클릭하면 원본을 볼 수 있습니다.</figcaption></figure>
+<figure class="ai-case-figure"><a href="assets/ai-game-prototypes.png" target="_blank" rel="noopener noreferrer" aria-label="자체 게임 제작 사례 이미지 원본 보기 (새 탭)"><img src="assets/ai-game-prototypes.png" alt="OneFingerRace 모바일 레이싱의 조향 규칙과 Unity 구현, Prototype Tango RTS의 이동 범위·행동력 명세와 프로토타입 화면" loading="lazy" width="956" height="622"></a></figure>
 </div>
 </article>
 <article class="ai-case">
@@ -362,7 +370,7 @@ footer{border-top:1px solid #24302c;padding:24px 0;color:#7c8884;font-size:12px}
 <div class="ai-case-point"><h4>대화를 통한 규칙과 누락 항목 검토</h4><p>몬스터 AI의 <em>스킬 테이블 ID 연결 여부</em>, 던전 입장 검사의 <em>누락된 조건</em> 등 문서의 규칙과 처리 흐름을 AI와 함께 검토했습니다.</p></div>
 <div class="ai-case-point"><h4>검토 결과를 실제 기획서에 적용</h4><p>간략한 설명을 구성하는 데 필요한 <em>변수와 타입</em>을 검토하고, 확인한 내용을 상태 흐름과 데이터 테이블에 반영했습니다. AI의 제안은 직접 확인한 뒤 기획 의도에 맞게 문서를 보완했습니다.</p></div>
 </div>
-<figure class="ai-case-figure"><a href="assets/ai-document-review.png" target="_blank" rel="noopener noreferrer" aria-label="기획서 검토 및 적용 사례 이미지 원본 보기 (새 탭)"><img src="assets/ai-document-review.png" alt="AI와 사용자 간의 대화에서 스킬 테이블 연결과 입장 검사 누락을 검토하고, 기획서의 상태 흐름 및 데이터 테이블에 적용한 사례" loading="lazy" width="949" height="620"></a><figcaption>AI와의 대화 내용 → 실제 기획서 적용 사례<br>이미지를 클릭하면 원본을 볼 수 있습니다.</figcaption></figure>
+<figure class="ai-case-figure"><a href="assets/ai-document-review.png" target="_blank" rel="noopener noreferrer" aria-label="기획서 검토 및 적용 사례 이미지 원본 보기 (새 탭)"><img src="assets/ai-document-review.png" alt="AI와 사용자 간의 대화에서 스킬 테이블 연결과 입장 검사 누락을 검토하고, 기획서의 상태 흐름 및 데이터 테이블에 적용한 사례" loading="lazy" width="949" height="620"></a></figure>
 </div>
 </article>
 </section>
@@ -407,16 +415,13 @@ const teamDetails={
    ['조작 숙련도에 따른 난이도 구분','이지·노말·하드의 3가지 난이도를 구성했습니다. 이지 모드는 <em>5~7세 어린이도 플레이할 수 있는 난이도</em>를 목표로 제작했으며, 노말·하드 모드는 더 높은 조작 숙련도를 요구하도록 장애물을 배치했습니다.']]
  },
  jump:{
-  levelDesign:[
+  work:[
    ['목표는 보여주고 경로는 탐색','무엇을 수집할지 알면서도 직접 길을 찾도록 <em>첫 번째 별을 시야에 배치</em>했습니다.<br>도달 경로는 직접 안내하지 않고 주변 지형을 살펴보도록 구성했습니다.'],
    ['다음 목표로 이어지는 시야 구성','탐색이 끊기지 않도록 첫 번째 별로 이동하는 중에 다음 별을 발견하게 했습니다.<br><em>연결된 발판과 이동 경로</em>를 보여주어 다음 행동을 판단하도록 했습니다.'],
    ['수집 순서의 선택권 제공','정해진 순서를 따라가기보다 스스로 탐색하도록 <em>별을 향하는 경로에 갈림길</em>을 배치했습니다.<br>별의 위치와 이동 경로를 비교해 수집 순서를 선택하도록 설계했습니다.']
   ],
   workImages:[{src:'assets/jumper-level-design.png',crop:[1432,798,450,141,942,630],title:'Project Jumper : 레벨 디자인',alt:'프로젝트 점퍼 레벨 디자인: 목표 발견, 다음 목표와 경로 확인, 수집 경로 선택, 레버 작동으로 경로 개방'}],
-  overview:[['개발 기간','2025.02 — 2025.10'],['게임 개요','지형을 탐색하고 별을 수집하며 진행하는 3D 플랫포머 게임'],['개인 담당','시스템 기획 · 플레이어 조작 방식 설계 · 프로젝트 팀장']],
-  work:[
-   ['플레이어 조작 방식 설계','플레이어의 이동과 점프 등 주요 조작 방식과 진행 규칙을 설계했습니다.'],
-   ['진행 흐름 및 협업 조율','목표와 이동 경로를 단계적으로 인지하도록 레벨 진행 방향을 구성했으며, 프로젝트 팀장으로서 작업 범위와 일정을 조율했습니다.']]
+  overview:[['개발 기간','2025.02 — 2025.10'],['게임 개요','지형을 탐색하고 별을 수집하며 진행하는 3D 플랫포머 게임'],['개인 담당','시스템 기획 · 플레이어 조작 방식 설계 · 프로젝트 팀장']]
  },
  moon:{
   workImages:[
@@ -501,7 +506,18 @@ function openProject(kind, slug){
     detail.hidden=false;
     detail.closest('.dialog-section').hidden=false;
     detail.closest('.dialog-section').querySelector('h3').textContent='개인 작업 내용';
-    detail.innerHTML=team.work.map(([heading,body])=>`<div class="team-work-point"><h4>${heading}</h4><p>${body}</p></div>`).join('');
+    const isLevelDesign=slug==='dash' || slug==='jump';
+    detail.innerHTML='';
+    if(isLevelDesign){
+      const projectHeading=document.createElement('h4');
+      projectHeading.className='team-work-heading';
+      projectHeading.textContent=slug==='dash' ? 'Dash Dash Dash : 레벨 디자인' : 'Project Jumper : 레벨 디자인';
+      detail.appendChild(projectHeading);
+    }
+    const workDescription=document.createElement('div');
+    workDescription.className='team-work-description';
+    workDescription.innerHTML=team.work.map(([heading,body])=>`<div class="team-work-point"><h4>${heading}</h4><p>${body}</p></div>`).join('');
+    detail.appendChild(workDescription);
     for(const image of team.workImages || []){
       const figure=document.createElement('figure');
       figure.className='team-work-image';
@@ -528,13 +544,7 @@ function openProject(kind, slug){
       heading.textContent=image.title;
       const caption=document.createElement('figcaption');
       caption.textContent=image.title+' · 이미지를 클릭하면 원본을 볼 수 있습니다.';
-      figure.appendChild(heading);
-      if(team.levelDesign){
-        const description=document.createElement('div');
-        description.className='team-level-description';
-        description.innerHTML=team.levelDesign.map(([title,body])=>`<div class="team-work-point"><h4>${title}</h4><p>${body}</p></div>`).join('');
-        figure.appendChild(description);
-      }
+      if(!isLevelDesign) figure.appendChild(heading);
       figure.append(link,caption);
       detail.appendChild(figure);
     }
