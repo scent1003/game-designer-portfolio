@@ -212,15 +212,10 @@ footer{border-top:1px solid #24302c;padding:24px 0;color:#7c8884;font-size:12px}
 .race-cover-title small{display:block;margin-top:18px;font-size:14px;line-height:1.7;letter-spacing:0;color:#d2e4df}
 #dialog-video{display:block;width:100%;height:100%;max-height:100%;object-fit:contain}
 #dialog-video[hidden],#dialog-img[hidden]{display:none}
-.race-tags{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 24px}
-.race-tags span{font-size:14px;padding:7px 10px;border:1px solid #36524b;color:#c4ded5}
-.race-point h4{margin:26px 0 10px;color:var(--mint);font-size:18px;line-height:1.5}
-.race-point p{font-size:16px}
 .race-gallery{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0 28px}
 .race-gallery figure{margin:0;min-width:0}
 .race-gallery img{width:100%;height:auto}
 .race-gallery figcaption{font-size:14px;line-height:1.6;color:#b9cac3;margin-top:10px}
-.race-video-note{font-size:14px!important;color:#a8c2b8!important}
 .project-dialog.has-video .dialog-info{padding-top:64px}
 @media(max-width:680px){.project-dialog.has-video{display:block;overflow-y:auto}.project-dialog.has-video .dialog-cover{height:min(110vw,440px)}.project-dialog.has-video .dialog-info{overflow:visible;padding:28px 22px}.race-cover-title{font-size:36px}}
 </style>
@@ -525,7 +520,6 @@ footer{border-top:1px solid #24302c;padding:24px 0;color:#7c8884;font-size:12px}
 </div></div></article>
 </section>
 <section class="shell contact" id="contact">
-<div class="mini">06 / CONTACT</div>
 <h2>LET'S <span>CONNECT.</span></h2>
 
 <address class="connect-details" aria-label="연락처">
@@ -725,14 +719,13 @@ function makeCard(item, kind){
   return article;
 }
 portfolioData.forEach(item=>portfolioGrid.appendChild(makeCard(item,'portfolio')));
-const raceData={slug:'onefinger-race',category:'personal',type:'개인 프로젝트 · Unity 6 / C#',title:'OneFingerRace',image:'assets/onefinger-corner.png',video:'assets/onefinger-race-gameplay.mp4',videoReady:true,summary:'손가락 하나로 가속·조향·부스트를 조절하는 3D 아케이드 레이싱입니다. 그립·드리프트의 주행 차이와 배터리 관리, 피트 정비를 하나의 랩 기록 도전으로 연결했습니다.',intro:'세로 화면에서 하나의 사각 조이스틱으로 차량을 조작하는 3D 아케이드 레이싱 게임입니다. 코너 진입 속도와 탈출 가속을 판단하고, 타이어 상태와 피트 소요 시간까지 관리하며 한 바퀴의 기록을 줄이는 경험을 설계했습니다.'};
+const raceData={slug:'onefinger-race',category:'personal',type:'PERSONAL PROJECT · Unity 6 / C#',title:'OneFingerRace',image:'assets/onefinger-corner.png',video:'assets/onefinger-race-gameplay.mp4',videoReady:true,summary:'손가락 하나로 가속·조향·부스트를 조절하는 3D 아케이드 레이싱입니다. 그립·드리프트의 주행 차이와 배터리 관리, 피트 정비를 하나의 랩 기록 도전으로 연결했습니다.',intro:'세로 화면에서 하나의 사각 조이스틱으로 차량을 조작하는 3D 아케이드 레이싱 게임입니다. 코너 진입 속도와 탈출 가속을 판단하고, 타이어 상태와 피트 소요 시간까지 관리하며 한 바퀴의 기록을 줄이는 경험을 설계했습니다.'};
 teamData.forEach(item=>teamGrid.appendChild(makeCard(item,'team')));
 const raceCard=makeCard(raceData,'personal');
 raceCard.dataset.category='personal';
 const raceCover=raceCard.querySelector('.cover-button');
 raceCover.classList.add('race-cover');
-raceCover.innerHTML='<img src="assets/onefinger-corner.png" alt="OneFingerRace 몬자 코너 주행 화면" loading="lazy"><span class="race-cover-title">ONE<br>FINGER<br>RACE<small>한 손으로 달리는<br>3D 아케이드 레이싱</small></span><span class="cover-hint">실플레이 및 설계 보기</span>';
-raceCard.querySelector('.card-action span').textContent='실플레이 및 핵심 설계';
+raceCover.innerHTML='<img src="assets/onefinger-corner.png" alt="OneFingerRace 몬자 코너 주행 화면" loading="lazy"><span class="race-cover-title">ONE<br>FINGER<br>RACE<small>한 손으로 달리는<br>3D 아케이드 레이싱</small></span><span class="cover-hint">소개보기 ↗</span>';
 teamGrid.appendChild(raceCard);
 
 const projectCards=[...teamGrid.children];
@@ -988,17 +981,19 @@ function openProject(kind, slug){
     detail.replaceChildren(detailParagraph);
   }
   if(kind==='personal'){
-    detail.closest('.dialog-section').querySelector('h3').textContent='핵심 설계와 개발 과정';
-    detail.innerHTML=`<div class="race-tags"><span>세로형 모바일</span><span>Unity Web 체험</span><span>조작·경기 운영 프로토타입</span></div>
-    <p class="race-video-note">몬자 실플레이 · 2분 28초<br>영상의 재생 버튼을 누르면 실제 조작과 주행 흐름을 확인할 수 있습니다.</p>
-    <div class="race-point"><h4>하나의 입력으로 가속부터 부스트까지</h4><p>누른 지점을 중심으로 사각 조이스틱이 나타납니다. 위로 밀면 가속하고 좌우로 움직이면 조향합니다. 위쪽 경계 밖으로 더 밀면 배터리를 사용하는 부스트가 작동하며, 경계 안으로 돌아오거나 손을 떼면 해제됩니다.</p></div>
-    <div class="race-point"><h4>같은 코스, 서로 다른 감속과 충전</h4><p>그립형은 아래로 당겨 제동하고, 충분한 속도에서 강하게 제동할 때 배터리를 회수합니다. 드리프트형은 큰 조향으로 슬라이드를 만들고 반대 조향으로 각도를 조절합니다. 유효한 속도·슬립각 범위에서 충전하며, 아래 입력은 타력 감속으로 처리합니다. 회수한 에너지는 직선과 코너 탈출에 사용합니다.</p></div>
+    intro.closest('.dialog-section').querySelector('h3').textContent='프로젝트 개요';
+    intro.innerHTML='<dl class="team-facts"><div><dt>게임 개요</dt><dd>한 손으로 가속·조향·부스트를 조절하는 3D 아케이드 레이싱</dd></div><div><dt>플랫폼</dt><dd>세로형 모바일 · Unity Web 빌드</dd></div><div><dt>제작 도구</dt><dd>Unity 6 · C#</dd></div><div><dt>개인 작업</dt><dd>차량 조작·주행 타입·배터리·피트 정비 규칙 설계 및 프로토타입 제작</dd></div><div><dt>개발 단계</dt><dd>조작 및 경기 운영 프로토타입</dd></div></dl>';
+    detail.closest('.dialog-section').querySelector('h3').textContent='개인 작업 내용';
+    detail.innerHTML=`<h4 class="team-work-heading">OneFingerRace · 차량 조작 및 주행 시스템 기획</h4>
+    <div class="team-work-point"><h4>하나의 입력으로 가속부터 부스트까지</h4><p>누른 지점을 중심으로 사각 조이스틱이 나타납니다. 위로 밀면 가속하고 좌우로 움직이면 조향합니다. 위쪽 경계 밖으로 더 밀면 배터리를 사용하는 부스트가 작동하며, 경계 안으로 돌아오거나 손을 떼면 해제됩니다.</p></div>
+    <div class="team-work-point"><h4>같은 코스, 서로 다른 감속과 충전</h4><p>그립형은 아래로 당겨 제동하고, 충분한 속도에서 강하게 제동할 때 배터리를 회수합니다. 드리프트형은 큰 조향으로 슬라이드를 만들고 반대 조향으로 각도를 조절합니다. 유효한 속도·슬립각 범위에서 충전하며, 아래 입력은 타력 감속으로 처리합니다. 회수한 에너지는 직선과 코너 탈출에 사용합니다.</p></div>
     <div class="race-gallery"><figure><img src="assets/onefinger-chicane.png" alt="시케인에서 반대 방향으로 조향하는 차량과 조이스틱" loading="lazy"><figcaption>00:16 · 시케인 방향 전환<br>진입 전 감속 후 연속 코너에 맞춰 좌우 조향을 전환합니다.</figcaption></figure><figure><img src="assets/onefinger-corner.png" alt="약 188km/h로 우측 고속 코너를 주행하는 화면" loading="lazy"><figcaption>00:28 · 고속 코너 조향<br>속도와 배터리를 확인하며 도로 곡률에 맞춰 조향합니다.</figcaption></figure></div>
-    <div class="race-point"><h4>한 바퀴 전체를 판단하는 기록 도전</h4><p>몬자는 약 5.793km의 평면화된 근사 코스입니다. 미니맵과 다음 코너의 제동 안내를 읽고 11개 체크포인트를 정방향으로 순서대로 통과해야 기록이 인정됩니다. 차량 복귀를 사용한 랩은 무효 처리하며, 최고기록은 현재 세션 동안 유지합니다.</p></div>
-    <div class="race-point"><h4>주행에서 이어지는 세 단계 피트 정비</h4><p>주행 거리와 미끄러짐, 강한 제동은 타이어를 마모시켜 접지력을 낮춥니다. 피트에서는 자동 조향 중 위·아래 드래그로 정비 구역에 정차하고, 무작위 숫자를 1 → 2 → 3 → 4 순서로 눌러 교체 시간을 줄입니다. 출구에서는 손을 떼고 기다린 뒤 신호에 맞춰 위로 밀어 가속 보너스를 노립니다.</p></div>
+    <div class="team-work-point"><h4>한 바퀴 전체를 판단하는 기록 도전</h4><p>몬자는 약 5.793km의 평면화된 근사 코스입니다. 미니맵과 다음 코너의 제동 안내를 읽고 11개 체크포인트를 정방향으로 순서대로 통과해야 기록이 인정됩니다. 차량 복귀를 사용한 랩은 무효 처리하며, 최고기록은 현재 세션 동안 유지합니다.</p></div>
+    <div class="team-work-point"><h4>주행에서 이어지는 세 단계 피트 정비</h4><p>주행 거리와 미끄러짐, 강한 제동은 타이어를 마모시켜 접지력을 낮춥니다. 피트에서는 자동 조향 중 위·아래 드래그로 정비 구역에 정차하고, 무작위 숫자를 1 → 2 → 3 → 4 순서로 눌러 교체 시간을 줄입니다. 출구에서는 손을 떼고 기다린 뒤 신호에 맞춰 위로 밀어 가속 보너스를 노립니다.</p></div>
     <div class="race-gallery"><figure><img src="assets/onefinger-pit-entry.png" alt="피트 진입 시 정차 위치와 속도를 안내하는 화면" loading="lazy"><figcaption>피트 진입 · 정차 정확도 조절</figcaption></figure><figure><img src="assets/onefinger-pit-service.png" alt="타이어 교체를 위해 숫자를 순서대로 누르는 화면" loading="lazy"><figcaption>타이어 교체 · 숫자 순서 입력</figcaption></figure></div>
-    <div class="race-point"><h4>조작 변경을 주행 방식의 차이로 연결</h4><p>초기의 재터치 핸드브레이크를 제거하고 그립형의 제동과 드리프트형의 조향 슬라이드로 주행 방식을 분리했습니다. 자동 피트 정비에는 정차 정확도·숫자 입력·출구 타이밍을 추가하고, 정비 소요 시간도 랩 기록에 포함했습니다.</p></div>
-    <div class="race-point"><h4>반복 플레이의 상태 전환 검증</h4><p>체크포인트 순서, 복귀 후 기록 무효화, 피트 입력 실패와 시간 초과를 검사하는 코드를 마련했습니다. 주행 타입별 감속·충전과 메뉴 복귀도 검사 대상으로 두었습니다. 주행 타입과 트랙을 선택한 뒤 바로 시작하며, PC에서는 방향키와 마우스로 조작할 수 있습니다.</p></div>`;
+    <h4 class="team-work-heading">OneFingerRace · 조작 개선 및 예외 상황 검증</h4>
+    <div class="team-work-point"><h4>조작 변경을 주행 방식의 차이로 연결</h4><p>초기의 재터치 핸드브레이크를 제거하고 그립형의 제동과 드리프트형의 조향 슬라이드로 주행 방식을 분리했습니다. 자동 피트 정비에는 정차 정확도·숫자 입력·출구 타이밍을 추가하고, 정비 소요 시간도 랩 기록에 포함했습니다.</p></div>
+    <div class="team-work-point"><h4>반복 플레이의 상태 전환 검증</h4><p>체크포인트 순서, 복귀 후 기록 무효화, 피트 입력 실패와 시간 초과를 검사하는 코드를 마련했습니다. 주행 타입별 감속·충전과 메뉴 복귀도 검사 대상으로 두었습니다. 주행 타입과 트랙을 선택한 뒤 바로 시작하며, PC에서는 방향키와 마우스로 조작할 수 있습니다.</p></div>`;
   }
   const actions=document.getElementById('dialog-actions'); actions.innerHTML='';
   actions.hidden=kind==='team';
@@ -1018,9 +1013,9 @@ function openProject(kind, slug){
     actions.appendChild(actionButton(item.pdf,'PDF 열람 ↗',false,true));
     meta.textContent='원본 문서 · '+item.pages;
   } else if(kind==='personal'){
-    titleActions.appendChild(actionButton(item.video,'실플레이 영상 열기',true,true));
+    titleActions.appendChild(actionButton(item.video,'플레이 영상 링크 ↗',true,true));
     actions.hidden=true;
-    meta.textContent='2026.11.24 · 조작 및 경기 운영 프로토타입';
+    meta.hidden=true;
   } else {
     if(item.videoReady){
       titleActions.appendChild(actionButton(item.video,'플레이 영상 링크 ↗',true,true));
