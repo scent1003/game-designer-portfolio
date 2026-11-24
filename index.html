@@ -51,9 +51,19 @@ section{scroll-margin-top:94px} .section{padding:120px 0 10px} .section-head{dis
 .card-body{padding:24px 25px} .card-type{font-size:11px;color:var(--mint);font-weight:850;letter-spacing:.12em} .card-body h3{font-size:23px;letter-spacing:-.045em;margin:13px 0 12px} .card-body p{margin:0;min-height:92px;color:#96a39f;font-size:13px;line-height:1.8}
 .card-action{display:flex;align-items:center;justify-content:space-between;width:100%;margin-top:20px;padding-top:18px;border:0;border-top:1px solid #2b3531;background:transparent;color:#d2d9d7;font-size:12px;cursor:pointer;text-align:left} .card-action span:first-child{color:var(--mint);font-weight:850}
 .hide{display:none!important}
+.personal-project-cover{display:flex;flex-direction:column;justify-content:center;aspect-ratio:1/1;padding:10%;background:#101716;color:var(--mint);font-size:clamp(32px,4vw,58px);font-weight:900;line-height:1.1;letter-spacing:-.04em}
+.band .tab{background:transparent;color:#53625c;border-color:#a5b1ac;font-size:14px}
+.band .tab.active{background:var(--mint);color:#001b16;border-color:var(--mint)}
+.tab:focus-visible{outline:2px solid var(--mint);outline-offset:4px}
 .band{background:var(--paper);color:#0a1110;padding:120px 0 110px;margin-top:120px} .band .mini{color:#0ca58f} .band .section-head p{color:#596762} .band .card{background:#f8f8f7;border-color:#c8cfcb} .band .card-body p{color:#53625c} .band .card-action{border-top-color:#d4dad6;color:#3c4a45}
 .ai-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px} .ai-card{padding:28px;border:1px solid #313b38;background:#111817;min-height:220px} .ai-index{width:40px;height:40px;border:1px solid #41504c;display:grid;place-items:center;color:var(--mint);font-weight:850;font-size:13px;margin-bottom:24px} .ai-card h3{font-size:22px;line-height:1.35;letter-spacing:-.04em;margin:0 0 14px} .ai-card p{margin:0;color:#96a39f;font-size:14px;line-height:1.8}
 .contact{padding:130px 0 90px;text-align:center} .contact h2{font-size:clamp(44px,7vw,90px);line-height:1.1;letter-spacing:-.08em;margin:16px 0 22px} .contact h2 span{color:var(--mint)} .contact p{margin:0 auto 30px;max-width:560px;color:#9da9a5;line-height:1.8}
+.connect-details{display:grid;gap:18px;margin:30px auto 0;font-style:normal;width:fit-content;max-width:100%;text-align:left}
+.connect-detail{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 20px}
+.connect-label{width:64px;flex-shrink:0;color:var(--muted);font-size:14px;font-weight:700}
+.connect-detail a{min-width:0;font-size:clamp(18px,3vw,24px);font-weight:700;line-height:1.6;overflow-wrap:anywhere;text-decoration:underline;text-decoration-color:#41504c;text-underline-offset:6px}
+.connect-detail a:hover{color:var(--mint);text-decoration-color:var(--mint)}
+.connect-detail a:focus-visible{outline:2px solid var(--mint);outline-offset:6px}
 footer{border-top:1px solid #24302c;padding:24px 0;color:#7c8884;font-size:12px} .foot{display:flex;justify-content:space-between;gap:18px}
 .project-overlay[hidden]{display:none} .project-overlay{position:fixed;inset:0;z-index:50;background:rgba(0,0,0,.82);display:grid;place-items:center;padding:28px;overflow:auto} .project-dialog{position:relative;width:min(1240px,100%);height:min(90vh,860px);max-height:calc(100dvh - 56px);overflow:hidden;background:#111817;border:1px solid #51635d;display:grid;grid-template-columns:minmax(240px,.85fr) 1.15fr;grid-template-rows:minmax(0,1fr);box-shadow:0 25px 80px #000a} .dialog-close{position:absolute;top:12px;right:14px;z-index:3;background:var(--mint);border:0;color:#04100e;font-size:28px;width:40px;height:40px;cursor:pointer} .dialog-cover{background:#000;position:relative;min-width:0;min-height:0;display:flex;align-items:center;justify-content:center;overflow:hidden} .dialog-cover img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:contain} .dialog-info{padding:64px 40px 34px;min-width:0;min-height:0;overflow-y:auto;overscroll-behavior:contain;scrollbar-gutter:stable} .dialog-info h2{font-size:clamp(25px,3vw,37px);line-height:1.35;letter-spacing:-.05em;margin:16px 0 24px} .dialog-section h3{font-size:13px;letter-spacing:.16em;color:var(--mint);margin:0 0 10px} .dialog-section p{margin:0 0 24px;color:#c4cdca;font-size:15px;line-height:1.9} .dialog-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px} .dialog-meta{margin-top:18px;font-size:12px;color:#7f8a86}
 @media(max-width:1100px){.shell{width:min(100% - 44px,900px)}.hero{grid-template-columns:1fr;gap:26px;padding:76px 0 28px;min-height:0}.hero-art{height:310px}.section,.about-shell{padding-top:88px}.about-card{grid-template-columns:1fr}.about-side{padding:28px}.info-grid{grid-template-columns:1fr}.grid-3{grid-template-columns:1fr 1fr}.ai-grid{grid-template-columns:1fr 1fr}.band{margin-top:90px;padding:90px 0 86px}.links{gap:16px}.links a{font-size:11px}}
@@ -228,7 +238,7 @@ footer{border-top:1px solid #24302c;padding:24px 0;color:#7c8884;font-size:12px}
 <nav class="links" id="nav">
 <a href="#about">ABOUT</a>
 <a href="#portfolio">PORTFOLIO</a>
-<a href="#team-projects">TEAM PROJECTS</a>
+<a href="#team-projects">PROJECTS</a>
 <a class="link-accent" href="#contact">CONTACT ↗</a>
 </nav>
 <button aria-expanded="false" aria-label="메뉴 열기" id="menu">☰</button>
@@ -255,7 +265,7 @@ footer{border-top:1px solid #24302c;padding:24px 0;color:#7c8884;font-size:12px}
 <div class="art-foot">HA GWANGSEON — SELECTED WORKS</div>
 </div>
 </section>
-<div class="strip"><div class="shell strip-inner"><span><strong>01</strong> ABOUT ME</span><span><strong>02</strong> SELECTED WORKS</span><span><strong>03</strong> TEAM PROJECTS</span></div></div>
+<div class="strip"><div class="shell strip-inner"><span><strong>01</strong> ABOUT ME</span><span><strong>02</strong> SELECTED WORKS</span><span><strong>03</strong> PROJECTS</span></div></div>
 <section class="shell about-shell" id="about">
 <div class="section-head">
 <div><div class="mini">01 / ABOUT ME</div><h2>자기소개</h2></div>
@@ -402,10 +412,20 @@ footer{border-top:1px solid #24302c;padding:24px 0;color:#7c8884;font-size:12px}
 <section class="band" id="team-projects">
 <div class="shell">
 <div class="section-head">
-<div><div class="mini">03 / TEAM PROJECTS</div><h2>팀 프로젝트</h2></div>
-<p>참여 프로젝트의 대표 이미지와 담당 업무를 소개합니다. 카드를 클릭하면 상세 설명을 볼 수 있습니다.</p>
+<div><div class="mini">03 / PROJECTS</div><h2>프로젝트</h2></div>
+<p>팀 프로젝트와 개인 프로젝트를 소개합니다. 팀 프로젝트 카드를 클릭하면 대표 이미지와 담당 업무를 확인할 수 있습니다.</p>
 </div>
-<div class="grid-3" id="team-grid"></div>
+<div aria-label="프로젝트 필터" class="tabs" role="group">
+<button type="button" class="tab active" data-filter="all" aria-pressed="true">전체 보기</button>
+<button type="button" class="tab" data-filter="team" aria-pressed="false">팀 프로젝트</button>
+<button type="button" class="tab" data-filter="personal" aria-pressed="false">개인 프로젝트</button>
+</div>
+<div class="grid-3" id="team-grid">
+<article class="card" data-category="personal">
+<div class="personal-project-cover" aria-hidden="true"><span>ONE</span><span>FINGER</span><span>RACE</span></div>
+<div class="card-body"><div class="card-type">개인 프로젝트</div><h3>OneFingerRace</h3></div>
+</article>
+</div>
 </div>
 </section>
 <section class="shell section" id="ai-workflow" hidden>
@@ -462,7 +482,10 @@ footer{border-top:1px solid #24302c;padding:24px 0;color:#7c8884;font-size:12px}
 <div class="mini">06 / CONTACT</div>
 <h2>LET'S <span>CONNECT.</span></h2>
 
-<a class="btn primary" href="mailto:hakangs730@naver.com">이메일 보내기 ↗</a>
+<address class="connect-details" aria-label="연락처">
+<div class="connect-detail"><span class="connect-label">이메일</span><a href="mailto:hakangs730@naver.com">hakangs730@naver.com</a></div>
+<div class="connect-detail"><span class="connect-label">전화번호</span><a href="tel:01089044345">010-8904-4345</a></div>
+</address>
 </section>
 </main>
 <footer><div class="shell foot"><span>© 2026 HA GWANGSEON · GAME DESIGN PORTFOLIO</span><span>DESIGNED WITH MINT / BLACK / SILVER</span></div></footer>
@@ -649,22 +672,32 @@ const teamGrid=document.getElementById('team-grid');
 function makeCard(item, kind){
   const article=document.createElement('article');
   article.className='card';
-  if(kind==='portfolio') article.dataset.category=item.category;
+  article.dataset.category=kind==='portfolio' ? item.category : 'team';
   const bottomLabel = kind==='portfolio' ? '소개 및 PDF 다운로드' : '소개 및 영상 링크';
   article.innerHTML=`<button type="button" class="cover-button" data-kind="${kind}" data-slug="${item.slug}" aria-label="${item.title} 소개 보기"><img src="${item.image}" alt="${item.title} 표지" loading="lazy"><span class="cover-hint">소개 보기 ↗</span></button><div class="card-body"><div class="card-type">${item.type}</div><h3>${item.title}</h3><p>${item.summary}</p><button type="button" class="card-action" data-kind="${kind}" data-slug="${item.slug}"><span>${bottomLabel}</span><span>↗</span></button></div>`;
   return article;
 }
 portfolioData.forEach(item=>portfolioGrid.appendChild(makeCard(item,'portfolio')));
-teamData.forEach(item=>teamGrid.appendChild(makeCard(item,'team')));
+const personalProjectCard=teamGrid.querySelector('[data-category="personal"]');
+teamData.forEach(item=>teamGrid.insertBefore(makeCard(item,'team'),personalProjectCard));
 
-const tabs=document.querySelectorAll('.tab');
-const portfolioCards=[...portfolioGrid.children];
-tabs.forEach(tab=>tab.addEventListener('click',()=>{
-  tabs.forEach(t=>{t.classList.remove('active');t.setAttribute('aria-pressed','false')});
-  tab.classList.add('active'); tab.setAttribute('aria-pressed','true');
-  portfolioCards.forEach(card=>card.classList.toggle('hide', tab.dataset.filter!=='all' && card.dataset.category!==tab.dataset.filter));
-}));
-tabs[0].setAttribute('aria-pressed','true');
+function setupCardFilters(section, grid){
+  const tabs=document.querySelectorAll(`${section} .tabs .tab`);
+  const cards=[...grid.children];
+  tabs.forEach(tab=>{
+    tab.setAttribute('aria-pressed',String(tab.classList.contains('active')));
+    tab.addEventListener('click',()=>{
+      tabs.forEach(t=>{
+        const active=t===tab;
+        t.classList.toggle('active',active);
+        t.setAttribute('aria-pressed',String(active));
+      });
+      cards.forEach(card=>card.classList.toggle('hide',tab.dataset.filter!=='all' && card.dataset.category!==tab.dataset.filter));
+    });
+  });
+}
+setupCardFilters('#portfolio',portfolioGrid);
+setupCardFilters('#team-projects',teamGrid);
 
 const menu=document.getElementById('menu'), nav=document.getElementById('nav');
 menu.addEventListener('click',()=>{ const open=nav.classList.toggle('open'); menu.setAttribute('aria-expanded', String(open)); });
