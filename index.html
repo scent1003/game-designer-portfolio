@@ -719,13 +719,13 @@ function makeCard(item, kind){
   return article;
 }
 portfolioData.forEach(item=>portfolioGrid.appendChild(makeCard(item,'portfolio')));
-const raceData={slug:'onefinger-race',category:'personal',type:'PERSONAL PROJECT · Unity 6 / C#',title:'OneFingerRace',image:'assets/onefinger-corner.png',video:'assets/onefinger-race-gameplay.mp4',videoReady:true,summary:'손가락 하나로 가속·조향·부스트를 조절하는 3D 아케이드 레이싱입니다. 그립·드리프트의 주행 차이와 배터리 관리, 피트 정비를 하나의 랩 기록 도전으로 연결했습니다.',intro:'세로 화면에서 하나의 사각 조이스틱으로 차량을 조작하는 3D 아케이드 레이싱 게임입니다. 코너 진입 속도와 탈출 가속을 판단하고, 타이어 상태와 피트 소요 시간까지 관리하며 한 바퀴의 기록을 줄이는 경험을 설계했습니다.'};
+const raceData={slug:'onefinger-race',category:'personal',type:'PERSONAL PROJECT · Unity 6 / C#',title:'OneFingerRace',image:'assets/onefinger-corner.png',video:'assets/onefinger-race-gameplay.mp4',videoReady:true,summary:'손가락 하나로 가속·조향·부스트를 조절하는 3D 모바일 레이싱 입니다. 그립·드리프트의 주행 차이와 배터리 관리, 피트 정비를 하나의 랩 기록 도전으로 연결했습니다.',intro:'세로 화면에서 하나의 사각 조이스틱으로 차량을 조작하는 3D 아케이드 레이싱 게임입니다. 코너 진입 속도와 탈출 가속을 판단하고, 타이어 상태와 피트 소요 시간까지 관리하며 한 바퀴의 기록을 줄이는 경험을 설계했습니다.'};
 teamData.forEach(item=>teamGrid.appendChild(makeCard(item,'team')));
 const raceCard=makeCard(raceData,'personal');
 raceCard.dataset.category='personal';
 const raceCover=raceCard.querySelector('.cover-button');
 raceCover.classList.add('race-cover');
-raceCover.innerHTML='<img src="assets/onefinger-corner.png" alt="OneFingerRace 몬자 코너 주행 화면" loading="lazy"><span class="race-cover-title">ONE<br>FINGER<br>RACE<small>한 손으로 달리는<br>3D 아케이드 레이싱</small></span><span class="cover-hint">소개보기 ↗</span>';
+raceCover.innerHTML='<img src="assets/onefinger-corner.png" alt="OneFingerRace 몬자 코너 주행 화면" loading="lazy"><span class="race-cover-title">ONE<br>FINGER<br>RACE<small>한 손으로 달리는<br>3D 아케이드 레이싱</small></span><span class="cover-hint">소개 보기 ↗</span>';
 teamGrid.appendChild(raceCard);
 
 const projectCards=[...teamGrid.children];
